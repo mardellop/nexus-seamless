@@ -8,7 +8,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Orbitron:wght@400;700&family=Michroma&display=swap" rel="stylesheet">
-    <link rel="icon" type="image/png" href="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png">
+    <link rel="icon" type="image/png" href="logo_nexus.png">
     <style>
         .job-offer-card {
             background: white;
@@ -52,12 +52,19 @@
 <body style="padding-top: 80px;">
     <div class="bg-gradient"></div>
     <div class="grid-overlay"></div>
-    
+        <!-- Preloader -->
+    <div class="preloader" id="preloader">
+        <div class="preloader-content">
+            <img src="logo_nexus.png" alt="NEXUS SEAMLESS" class="preloader-logo">
+            <div class="preloader-brand-name">NEXUS SEAMLESS</div>
+            <div class="preloader-bar"></div>
+        </div>
+    </div>
     <header class="header">
         <div class="header-container">
             <div class="logo">
                 <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
-                    <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS S" class="logo-img">
+                    <img src="logo_nexus.png" alt="NEXUS S" class="logo-img">
                 </a>
             </div>
             <nav class="nav">
@@ -83,7 +90,7 @@
                 <a href="blog.html">Blog</a>
                 <a href="faq.html">FAQ</a>
                 <a href="testimonios.html">Testimonios</a>
-                <a href="index.html#preregister" class="btn-primary-small">Reservar Ahora</a>
+                <a href="index.html#preregister" class="btn-primary-small">Reservar NEXUS SEAMLESS</a>
             </nav>
         </div>
     </header>
@@ -155,8 +162,8 @@
                     </div>
                     
                     <div class="form-group-custom" style="margin-bottom: 40px;">
-                        <label>Proyectos que has realizado</label>
-                        <input type="url" placeholder="(URL de tu LinkedIn, portfolio en Notion o GitHub, etc.)" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif;">
+                        <label>Proyectos que has realizado (Opcional)</label>
+                        <input type="url" placeholder="(URL de tu LinkedIn, portfolio en Notion o GitHub, etc.)" style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 8px; font-family: 'Inter', sans-serif;">
                     </div>
 
                     <!-- 2. Especialización de Núcleo -->
@@ -182,9 +189,9 @@
                     <!-- 4. Evidencia Técnica -->
                     <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: #000; margin-bottom: 20px;">4. Currículum</h4>
                     <div class="form-group-custom" style="margin-bottom: 40px;">
-                        <label>Sube aquí tu currículum</label>
+                        <label>Sube aquí tu currículum (Opcional)</label>
                         <div style="border: 2px dashed #06b6d4; padding: 20px; border-radius: 8px; text-align: center; background: white;">
-                            <input type="file" required accept=".pdf,.doc,.docx,.zip" style="width: 100%; padding: 10px;">
+                            <input type="file" accept=".pdf,.doc,.docx,.zip" style="width: 100%; padding: 10px;">
                             <p style="font-size: 13px; color: #666; margin-top: 10px;">(Aceptamos archivos de alta fidelidad. Peso máximo 10MB. Al igual que el titanio, buscamos ligereza y resistencia).</p>
                         </div>
                     </div>
@@ -208,23 +215,23 @@
                     <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#06b6d4" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
                 </div>
                 
-                <h2 class="section-title" style="margin-bottom: 16px;">Conexión Establecida</h2>
+                <h2 class="section-title" style="margin-bottom: 16px;">Formulario enviado</h2>
                 <h3 style="font-size: 22px; color: #000; margin-bottom: 30px; font-weight: 600;">Tu talento ya fluye con el núcleo de NEXUS SEAMLESS.</h3>
                 
-                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify; margin-bottom: 40px;">Gracias por compartir tu estructura con nosotros. Hemos recibido tus datos y, al igual que nuestra trama de memoria molecular, ya los estamos integrando en nuestro análisis de red.</p>
+                <p style="font-size: 18px; line-height: 1.8; color: #000; text-align: justify; margin-bottom: 40px;">Gracias por compartir tu experiencia con nosotros. Hemos recibido tu solicitud y, al igual que nuestra trama de memoria molecular, ya los estamos integrando en nuestro análisis de red.</p>
                 
                 <div style="text-align: left; background: white; padding: 30px; border-radius: 16px; margin-bottom: 40px; border: 1px solid #eee;">
-                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: var(--primary); margin-bottom: 20px;">¿Qué ocurre ahora?</h4>
-                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong style="color:#000;">Sincronización:</strong> Nuestro Arquitecto de Sistemas revisará cómo tu perfil se adhiere a nuestra visión de hardware sin fricciones.</p>
-                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;"><strong style="color:#000;">Resonancia:</strong> Si detectamos una frecuencia común, nos pondremos en contacto contigo para una sesión de diseño y estrategia. No buscamos entrevistas rígidas, sino diálogos que fluyan.</p>
-                    <p style="font-size: 16px; line-height: 1.6;"><strong style="color:#000;">Latencia Cero:</strong> Odiamos las esperas innecesarias. Recibirás una actualización de nuestro estado en un ciclo máximo de 7 días naturales.</p>
+                    <h4 style="font-size: 20px; font-family: 'Orbitron', sans-serif; color: var(--primary); margin-bottom: 20px;">¿Qué pasa ahora?</h4>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">Nuestro equipo revisará tu perfil.</p>
+                    <p style="font-size: 16px; line-height: 1.6; margin-bottom: 15px;">Si tu perfil nos encaja, nos pondremos en contacto contigo para una sesión. No buscamos entrevistas rígidas, sino diálogos que fluyan.</p>
+                    <p style="font-size: 16px; line-height: 1.6;">Recibirás una actualización de tu solicitud en un plazo de 7 días naturales como máximo.</p>
                 </div>
 
                 <p style="font-size: 16px; line-height: 1.8; color: #000; margin-bottom: 30px;">Mientras tanto, te invitamos a seguir explorando <a href="blog.html" style="color: var(--primary); font-weight: 600; text-decoration: none;">Seamless Soul</a>, nuestro blog, para entender mejor cómo estamos rediseñando los límites de la física aplicada.</p>
                 
                 <p style="font-size: 20px; font-style: italic; font-weight: 600; color: #111827; margin-bottom: 40px;">El futuro no se dobla, se enrolla. Y tú acabas de dar el primer giro.</p>
                 
-                <button onclick="window.location.href='index.html'" class="btn-cyan-full" style="padding: 14px 40px; border-radius: 8px; font-family: 'Orbitron', sans-serif; font-size: 16px; width: auto; display: inline-block;">VOLVER AL ORIGEN</button>
+                <button onclick="window.location.href='index.html'" class="btn-cyan-full" style="padding: 14px 40px; border-radius: 8px; font-family: 'Orbitron', sans-serif; font-size: 16px; width: auto; display: inline-block;">VOLVER A LA PÁGINA DE INICIO</button>
             </div>
         </section>
 
@@ -260,7 +267,7 @@
                 <div class="footer-top">
                     <div class="footer-brand">
                         <div class="logo">
-                            <img src="https://raw.githubusercontent.com/mardellop/NEXUS/main/Logo%20Nexus%20S.png" alt="NEXUS SEAMLESS" class="logo-img footer-logo-img">
+                            <img src="nexus-logo.png" alt="NEXUS SEAMLESS" class="logo-img footer-logo-img">
                         </div>
                         <p class="brand-desc">El primer ordenador que elimina las pantallas rígidas y los puertos físicos. La tecnología que fluye contigo.</p>
                         <div class="social-links">
