@@ -93,9 +93,7 @@
                         <img src="teclado-nexus.png" alt="NEXUS SEAMLESS Keyboard" class="hero-img">
                     </div>
                     <div class="slide">
-                        <video id="carouselVideo" class="hero-img" autoplay playsinline style="width: 100%; height: 100%; object-fit: cover;">
-                            <source src="Video%20Demo.mp4" type="video/mp4">
-                        </video>
+                        <img src="Nexus S cilindro.png" alt="NEXUS SEAMLESS Cilindro" class="hero-img">
                     </div>
                 </div>
                 <div class="slider-controls">
@@ -387,13 +385,10 @@
         function showSlide(n) {
             const slides = document.querySelectorAll('.slide');
             const dots = document.querySelectorAll('.dot');
-            const video = document.getElementById('carouselVideo');
 
             if (!slides || slides.length === 0) return;
             
             clearTimeout(slideTimer);
-            if (video) video.onended = null;
-
             slideIndex = n;
             if (slideIndex >= slides.length) slideIndex = 0;
             if (slideIndex < 0) slideIndex = slides.length - 1;
@@ -402,66 +397,10 @@
             slides.forEach((s, idx) => s.classList.toggle('active', idx === slideIndex));
             dots.forEach((d, idx) => d.classList.toggle('active', idx === slideIndex));
 
-            if (slideIndex === 3 && video) {
-                // Video Slide Logic (Index 3)
-                video.currentTime = 0;
-                video.muted = false; 
-                video.volume = 1.0;
-
-                setTimeout(() => {
-                    video.play().catch(e => {
-                        video.muted = true;
-                        video.play().catch(() => {});
-                    });
-                }, 50);
-
-                video.onended = () => {
-                    showSlide((slideIndex + 1) % slides.length);
-                };
-            } else {
-                // We NO LONGER pause the video here! 
-                // Audio stays active until we scroll away.
-                slideTimer = setTimeout(() => {
-                    showSlide((slideIndex + 1) % slides.length);
-                }, 5000);
-            }
-        }
-
-        // Ultra-aggressive scroll-based audio control
-        const sliderContainer = document.querySelector('.hero-slider-container');
-        const heroVideo = document.getElementById('carouselVideo');
-        
-        window.addEventListener('scroll', () => {
-            if (!sliderContainer || !heroVideo) return;
-            
-            const rect = sliderContainer.getBoundingClientRect();
-            
-            // If the carousel is not at the top of the viewport
-            // OR if the user has scrolled significantly
-            if (rect.top < -100 || rect.bottom < 500) { 
-                if (!heroVideo.paused) {
-                    heroVideo.pause();
-                    heroVideo.muted = true;
-                }
-            } else {
-                // If it's back in focus and we're on the video slide, resume
-                if (slideIndex === 3 && heroVideo.paused) {
-                    heroVideo.play().catch(() => {});
-                }
-            }
-        });
-
-        // Intersection Observer for backup
-        if (sliderContainer && heroVideo) {
-            const observer = new IntersectionObserver((entries) => {
-                entries.forEach(entry => {
-                    if (!entry.isIntersecting) {
-                        heroVideo.pause();
-                        heroVideo.muted = true;
-                    }
-                });
-            }, { threshold: 0.5 }); // 50% visibility required to keep playing
-            observer.observe(sliderContainer);
+            // Auto-advance every 5 seconds
+            slideTimer = setTimeout(() => {
+                showSlide((slideIndex + 1) % slides.length);
+            }, 5000);
         }
 
         function currentSlide(n) {
