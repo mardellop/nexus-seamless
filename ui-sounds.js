@@ -32,10 +32,7 @@
     }
 
     document.addEventListener('mousedown', (e) => {
-        const target = e.target.closest('a, button, .dot, .star, .social-icon');
-        if (target) {
-            playClick();
-        }
+        playClick();
     });
 
     // El navegador requiere interacción humana antes de reproducir sonidos de UI
